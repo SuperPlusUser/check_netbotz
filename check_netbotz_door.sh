@@ -4,7 +4,7 @@
 # Put here /usr/lib/nagios/plugins/
 #
 PLUGIN_NAME="Icinga plugin check command for door sensor monitoring on Netbotz 250, 3xx and 4xx RackMonitor Devices with PowerNet-MIB or NETBOTZ-MIB"
-PLUGIN_VERSION="2022.05.1"
+PLUGIN_VERSION="v1.0"
 PRINTINFO=`printf "\n%s, version %s\n \n" "$PLUGIN_NAME" "$PLUGIN_VERSION"`
 #
 # Exit codes
@@ -105,7 +105,7 @@ while true; do
         *) printf "Unknown value for option %s. Use 'DES' or 'AES'\n" "$1" ; exit $codeUNKNOWN ;;
         esac ;;
      -U|--secname)       v3SECNAME=$2 ; shift 2 ;;
-     -A|--authpasswd)  v3AUTHPWD=$2 ; shift 2 ;;
+     -A|--authpasswd)    v3AUTHPWD=$2 ; shift 2 ;;
      -X|--privpasswd)    v3PRIVPWD=$2 ; shift 2 ;;
      -m|--mib)
         case "$2" in
