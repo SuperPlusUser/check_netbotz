@@ -20,7 +20,7 @@ Option   GNU long option     Meaning
  -a      --authproto         SNMPv3 auth proto. Possible values: MD5|SHA
  -x      --privproto         SNMPv3 priv proto. Possible values: DES|AES
  -U      --secname           SNMPv3 username
- -A      --authpassword      SNMPv3 authentication password
+ -A      --authpasswd        SNMPv3 authentication password
  -X      --privpasswd        SNMPv3 privacy password
  -m      --mib               MIB to use. Possible values: 'powernet' (e.g. used by NetBotz 250) or 'netbotz' (e.g. used by NetBotz 320E and 450)
  -t      --type              Test Type. Valid values are 'temp' for temperature test, and 'humid' for humidity tests. [Default:temp]
@@ -51,7 +51,7 @@ Option   GNU long option     Meaning
  -a      --authproto         SNMPv3 auth proto. Possible values: MD5|SHA
  -x      --privproto         SNMPv3 priv proto. Possible values: DES|AES
  -U      --secname           SNMPv3 username
- -A      --authpassword      SNMPv3 authentication password
+ -A      --authpasswd        SNMPv3 authentication password
  -X      --privpasswd        SNMPv3 privacy password
  -m      --mib               MIB to use. Possible values: powernet (e.g. used by NetBotz 250) or netbotz (e.g. used by NetBotz 320E and 450)
  -q      --help              Show this message
