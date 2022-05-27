@@ -4,7 +4,7 @@
 # Put here /usr/lib/nagios/plugins/
 #
 PLUGIN_NAME="Icinga plugin check command for temperature and humidity sensor monitoring on Netbotz 250, 3xx and 4xx RackMonitor devices with PowerNet-MIB or NETBOTZ-MIB"
-PLUGIN_VERSION="2022.03.3"
+PLUGIN_VERSION="v1.0"
 PRINTINFO=`printf "\n%s, version %s\n \n" "$PLUGIN_NAME" "$PLUGIN_VERSION"`
 #
 # Exit codes
