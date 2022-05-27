@@ -56,7 +56,7 @@ Option   GNU long option     Meaning
  -a      --authproto         SNMPv3 auth proto. Possible values: MD5|SHA
  -x      --privproto         SNMPv3 priv proto. Possible values: DES|AES
  -U      --secname           SNMPv3 username
- -A      --authpassword      SNMPv3 authentication password
+ -A      --authpasswd        SNMPv3 authentication password
  -X      --privpasswd        SNMPv3 privacy password
  -m      --mib               MIB to use. Possible values: powernet (e.g. used by NetBotz 250) or netbotz (e.g. used by NetBotz 320E and 450)
  -q      --help              Show this message
@@ -78,7 +78,7 @@ if [ -z $1 ]; then
     Usage; exit $codeUNKNOWN;
 fi
 #
-OPTS=`getopt -o H:P:C:a:x:U:A:X:m:qv -l hostname:,hostaddr:,protocol:,community:,authproto:,privproto:,secname:,authpassword:,privpasswd:,mib:,help,version -- "$@"`
+OPTS=`getopt -o H:P:C:a:x:U:A:X:m:qv -l hostname:,hostaddr:,protocol:,community:,authproto:,privproto:,secname:,authpasswd:,privpasswd:,mib:,help,version -- "$@"`
 eval set -- "$OPTS"
 while true; do
    case $1 in
@@ -105,7 +105,7 @@ while true; do
         *) printf "Unknown value for option %s. Use 'DES' or 'AES'\n" "$1" ; exit $codeUNKNOWN ;;
         esac ;;
      -U|--secname)       v3SECNAME=$2 ; shift 2 ;;
-     -A|--authpassword)  v3AUTHPWD=$2 ; shift 2 ;;
+     -A|--authpasswd)  v3AUTHPWD=$2 ; shift 2 ;;
      -X|--privpasswd)    v3PRIVPWD=$2 ; shift 2 ;;
      -m|--mib)
         case "$2" in
