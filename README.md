@@ -1,13 +1,13 @@
 # check_netbotz
-This repository contains two bash scripts for monitoring temperature, humidity and door sensors on NetBotz Rack Monitor devices via SNMP v2c or v3. The check plugins are developed for Icinga, but should also work for other (nagios based) monitoring tools. All connected wired sensors of the specified type are automatically detected and checked for compliance with the specified thresholds and for any alarms present on the NetBotz device. Performance data will also be generated based on the sensor values and thresholds.
+This repository contains two bash scripts for monitoring temperature, humidity and door sensors on NetBotz Rack Monitor devices via SNMP v2c or v3. The check plugins are developed for Icinga, but should also work for other (Nagios based) monitoring tools. All connected wired sensors of the specified type are automatically detected and checked for compliance with the specified thresholds and for any alarms present on the NetBotz device. Performance data will also be generated based on the sensor values and thresholds.
 
 Works with NetBotz devices using the PowerNet MIB (e.g. NetBotz 250) or NetBotz MIB (e.g. NetBotz 320E, 450). You can manually specify the MIB to use (see --mib option below). If you do not specify a MIB, the plugins try to automatically detect the device type.
 
 Needs Net-SNMP Package installed. Tested with Ubuntu 18.04 and 20.04.
 
-For installation, simply copy the two .sh files to `/usr/lib/nagios/plugins` (or whereevere your check plugins are stored) and make them executable.
+For installation, simply copy the two .sh files to `/usr/lib/nagios/plugins` (or wherever your check plugins are stored) and make them executable.
 
-## Temperature an humidity checks
+## Temperature and humidity checks
 
 ```
 Usage: check_netbotz_temp_humid.sh [OPTIONS]
